@@ -1,0 +1,43 @@
+.photoPost {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 40rem) {
+  .photoPost {
+    grid-template-columns: 1fr;
+  }
+}
+
+.file {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  background: #eee;
+  border-radius: 0.4rem;
+  border: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.file:hover,
+.file:focus {
+  outline: none;
+  border-color: #fb1;
+  background: white;
+  box-shadow: 0 0 0 3px #fea;
+}
+
+.preview {
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.preview::after {
+  content: "";
+  display: block;
+  height: 0px;
+  padding-bottom: 100%;
+}
